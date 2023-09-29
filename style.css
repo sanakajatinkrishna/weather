@@ -1,0 +1,218 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.search-bar {
+    text-align: center;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.unit-toggle {
+    margin-left: 20px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.unit-toggle label {
+    margin-right: 10px;
+}
+
+.unit-toggle select {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Weather card styles */
+.weather-card {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.weather-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.weather-card p {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Weekly weather styles */
+.weekly-weather {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.weekly-weather .day {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    width: 120px;
+}
+
+.weekly-weather .day h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Hourly weather styles */
+.hourly-weather {
+    margin-top: 20px;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    white-space: nowrap;
+    display: flex;
+}
+
+.hourly-weather .hour {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 20px; /* Increase size to prevent text clipping */
+    text-align: center;
+    margin: 10px;
+    width: 150px; /* Increase width for better readability */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hourly-weather .hour h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Pressure styles */
+.pressure {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Wind direction styles */
+.wind-direction {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.wind-icon {
+    width: 60px;
+    height: 60px;
+    background: url('wind-icon.png') center/cover;
+    animation: rotateWind 2s linear infinite;
+}
+
+/* Keyframe animations */
+@keyframes slide-up {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes rotateWind {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Media query for responsive design */
+@media (max-width: 600px) {
+    .search-bar {
+        flex-direction: column;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .unit-toggle {
+        margin-top: 10px;
+        justify-content: flex-start;
+    }
+
+    .unit-toggle label {
+        margin-right: 5px;
+    }
+
+    .hourly-weather {
+        overflow-x: auto;
+    }
+}

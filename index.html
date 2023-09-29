@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <header>
+        <h1>Weather App</h1>
+    </header>
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" id="locationInput" placeholder="Enter location (e.g., city or ZIP code)">
+            <button id="getWeatherBtn">Get Weather</button>
+            <div class="unit-toggle">
+                <label for="unitToggle">Units:</label>
+                <select id="unitToggle">
+                    <option value="metric">Celsius</option>
+                    <option value="imperial">Fahrenheit</option>
+                </select>
+            </div>
+        </div>
+        <div class="weather-card">
+            <!-- Current weather data will be displayed here -->
+        </div>
+        <div class="weekly-weather">
+            <!-- Weekly weather data will be displayed here -->
+        </div>
+        <div class="hourly-weather">
+            <!-- Hourly weather data will be displayed here -->
+        </div>
+        <div class="pressure">
+            <h3>Pressure:</h3>
+            <p id="pressure">Loading...</p>
+        </div>
+        <div class="wind-direction">
+            <h3>Wind Direction:</h3>
+            <div id="wind-direction" class="wind-icon"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
